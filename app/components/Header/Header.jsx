@@ -12,6 +12,23 @@ const Header = () => {
   const [isOpen, setisOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
+  // const handleScroll = () => {
+  //   if (window.scrollY > 0) {
+  //     setScrolling(true);
+  //   } else {
+  //     setScrolling(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  useEffect(() => {
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setScrolling(true);
@@ -20,13 +37,12 @@ const Header = () => {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   useEffect(() => {
     if (isOpen) {

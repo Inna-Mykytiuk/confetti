@@ -51,6 +51,10 @@ const SubmitForm = () => {
       setFormSubmitted(true);
       return;
     }
+    setName("");
+    setEmail("");
+    setMessage("");
+    setFormSubmitted(true);
 
     console.log("Name:", name);
     console.log("Email:", email);
