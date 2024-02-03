@@ -64,4 +64,5 @@ To run the application locally, follow these steps:
 4. React-Slick:
    For dynamic and eye-catching presentations of our balloon decorations, we've implemented React-Slick, a powerful slider component that showcases our portfolio in style.
 
-![preview](https://github.com/Inna-Mykytiuk/confetti/blob/main/src/assets/images/confetti.jpg)
+![preview](https://github.com/Inna-Mykytiuk/confetti/blob/main/public/assets/images/confetti.jpg)
+
