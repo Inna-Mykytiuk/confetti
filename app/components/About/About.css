@@ -27,7 +27,8 @@
 }
 
 .about-text p {
-  color: var(--main-color);
+  color: var(--extra-text-color);
+
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 20px;
@@ -73,7 +74,7 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 28.8px */
+  line-height: 120%; 
   letter-spacing: -0.24px;
   text-transform: uppercase;
 }
@@ -84,7 +85,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 135%; /* 27px */
+  line-height: 135%;
   letter-spacing: -0.2px;
 }
 
@@ -110,7 +111,7 @@
     line-height: 0.8;
   }
   .about-text p {
-    color: #565148;
+    color: var(--extra-text-color);
     font-size: 24px;
     letter-spacing: -0.24px;
   }
@@ -120,8 +121,8 @@
   }
   .about-item h3 {
     font-size: 40px;
-    line-height: 95%;
     letter-spacing: -0.4px;
+    line-height: normal;
     padding: 0 160px 0 0;
   }
   .about-item:nth-child(1) p {
@@ -145,12 +146,16 @@
     margin-bottom: 64px;
   }
   .about-text p {
+    color: var(--main-color);
     font-size: 24px;
     letter-spacing: -0.24px;
   }
   .about-text h2 {
     font-size: 56px;
     line-height: 0.8;
+  }
+    .about-item h3 {
+    line-height: 95%;
   }
   .about-item:nth-child(1) p {
     padding: 0 100px 0 0;

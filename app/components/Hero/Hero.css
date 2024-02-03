@@ -68,7 +68,6 @@
 .title {
   margin: 0;
   width: 319px;
-  padding: 0 20px;
   position: absolute;
   z-index: 3;
 }
@@ -80,7 +79,7 @@
   font-family: inherit;
   font-size: 40px;
   font-weight: 500;
-  letter-spacing: -0.88px;
+  letter-spacing: -0.4px;
   line-height: 0.8;
   text-transform: uppercase;
 }
@@ -108,12 +107,11 @@
   }
   .title {
     width: 484px;
-    padding: 0 15px;
   }
   .title,
   .title span {
     line-height: 0.9;
-
+    letter-spacing: -0.64px;
     font-size: 64px;
   }
 }
@@ -138,20 +136,7 @@
   .title,
   .title span {
     font-size: 88px;
+    letter-spacing: -0.88px;
   }
 }
 
-/* @media screen and (min-width: 1440px) {
-  .baloon-img.first {
-    width: 600px;
-    height: 650px;
-    top: 150px;
-    left: 300px;
-  }
-  .baloon-img.second {
-    width: 560px;
-    height: 580px;
-    bottom: 80px;
-    right: 320px;
-  }
-} */

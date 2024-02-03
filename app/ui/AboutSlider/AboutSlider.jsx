@@ -21,14 +21,14 @@ export default class AboutSlider extends Component {
     return (
       <div className='container'>
         <Slider {...settings} className='slider-list'>
-          <div className='about-item accent'>
+          <div className='about-slide accent'>
             <h3>Kreatywne podejście i dbałość o szczegóły</h3>
             <p>
               Specjaliści zapewniają doradztwo i kreatywność przy wyborze
               dekoracji balonowych, z dbałością o szczegóły
             </p>
           </div>
-          <div className='about-item black'>
+          <div className='about-slide black'>
             <h3>Materiały przyjazne dla środowiska</h3>
             <p>
               Wykorzystywane są materiały najwyższej jakości, w tym
@@ -36,14 +36,14 @@ export default class AboutSlider extends Component {
               ślad na środowisku.
             </p>
           </div>
-          <div className='about-item gray'>
+          <div className='about-slide gray'>
             <h3>Szeroka gama kolorów do personalizacji</h3>
             <p>
               Balony i dekoracje są wybierane z szerokiej gamy kolorów, co
               pozwala spersonalizować wystrój na każdą okazję.
             </p>
           </div>
-          <div className='about-item light'>
+          <div className='about-slide light'>
             <h3>Gwarancja dostawy i montażu</h3>
             <p>
               Firma gwarantuje nie tylko wysokiej jakości dostawę zamówień, ale

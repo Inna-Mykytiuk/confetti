@@ -2,40 +2,57 @@
   display: block;
 }
 
-.slider-list .about-item {
-  display: flex;
+.about-slide {
+  display: flex !important;
   flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  padding: 24px;
   height: 253px;
-  gap: 55px;
 }
 
-.slider-list .about-item p {
-  margin-top: 45px;
+.about-slide h3 {
+  color: #FFFFFE;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+}
+
+.about-slide p {
+  color: #FFFFFE;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%;
+  letter-spacing: -0.16px;
 }
 
 .slick-dots {
   bottom: -55px;
 }
 
-.slider-list .about-item.accent {
+.about-slide.accent {
   background: var(--accent-color);
 }
 
-.slider-list .about-item.black {
+.about-slide.black {
   background: var(--main-color);
 }
 
-.slider-list .about-item.gray {
+.about-slide.gray {
   background: var(--card-dark-gray);
 }
-.slider-list .about-item.light {
+.about-slide.light {
   background: var(--card-light-gray);
 }
 
 @media screen and (min-width: 480px) {
-  .slider-list .about-item p {
-    margin-top: 55px;
+  .about-slide p {
     font-size: 16px;
   }
 }

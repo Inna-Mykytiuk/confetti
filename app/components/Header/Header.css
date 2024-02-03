@@ -134,6 +134,7 @@
   font-family: "Anzeigen Grotesk T";
   font-size: 24px;
   font-weight: 500;
+  letter-spacing: -0.24px;
   text-transform: uppercase;
   transition: color 0.3s ease-in-out;
 }
@@ -152,6 +153,7 @@
   }
   .mobile-links a {
     font-size: 40px;
+    letter-spacing: -0.4px;
   }
   .header {
     padding: 30px 0;
@@ -165,5 +167,6 @@
   }
   .mobile-links a {
     font-size: 64px;
+    letter-spacing: -0.64px;
   }
 }
