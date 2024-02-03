@@ -1,0 +1,157 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+
+  background: url(../../../public/assets/images/hero.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.baloon-img {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: block;
+  width: 520px;
+  height: 530px;
+}
+
+@keyframes balloonAnimationFirst {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes balloonAnimationSecond {
+  0%,
+  100% {
+    transform: translate(-20px, -20px);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+}
+
+.baloon-img.first {
+  width: 245px;
+  height: 247px;
+  transform: rotate(0deg);
+  top: 65px;
+  left: -95px;
+  animation: balloonAnimationFirst 5s infinite;
+}
+
+.baloon-img.second {
+  width: 247px;
+  height: 250px;
+  transform: rotate(9deg);
+
+  bottom: 40px;
+  right: -70px;
+  animation: balloonAnimationSecond 3s infinite;
+}
+
+.title {
+  margin: 0;
+  width: 319px;
+  padding: 0 20px;
+  position: absolute;
+  z-index: 3;
+}
+
+.title,
+.title span {
+  color: var(--accent-color);
+  text-align: center;
+  font-family: inherit;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.88px;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: var(--main-color);
+}
+
+@media screen and (min-width: 768px) {
+  .baloon-img.first {
+    width: 372px;
+    height: 377px;
+    transform: rotate(-37deg);
+
+    top: 159px;
+    left: 133px;
+  }
+  .baloon-img.second {
+    width: 406px;
+    height: 411px;
+    transform: rotate(9deg);
+
+    bottom: 80px;
+    right: 120px;
+  }
+  .title {
+    width: 484px;
+    padding: 0 15px;
+  }
+  .title,
+  .title span {
+    line-height: 0.9;
+
+    font-size: 64px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .baloon-img.first {
+    width: 520px;
+    height: 520px;
+    top: 100px;
+    left: 200px;
+  }
+  .baloon-img.second {
+    width: 460px;
+    height: 480px;
+    bottom: 60px;
+    right: 220px;
+  }
+  .title {
+    width: 770px;
+    padding: 0 70px;
+  }
+  .title,
+  .title span {
+    font-size: 88px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .baloon-img.first {
+    width: 600px;
+    height: 650px;
+    top: 150px;
+    left: 300px;
+  }
+  .baloon-img.second {
+    width: 560px;
+    height: 580px;
+    bottom: 80px;
+    right: 320px;
+  }
+}

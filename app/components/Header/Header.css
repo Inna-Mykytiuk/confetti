@@ -1,0 +1,169 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  z-index: 30;
+}
+
+.header.scrolling {
+  background-color: white;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation.scrolling {
+  justify-content: end;
+}
+
+.logo {
+  font-family: inherit;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--accent-color);
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-text {
+  font-family: inherit;
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+}
+
+.menu-btn,
+.btn-close {
+  display: flex;
+  justify-content: flex-end;
+
+  border: none;
+  background-color: transparent;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo.scrolling,
+.menu-btn.scrolling,
+.menu-text.scrolling {
+  display: none;
+}
+
+.menu-btn p,
+.menu-btn svg path {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn:hover p,
+.menu-btn:hover svg path {
+  color: var(--accent-color);
+  stroke: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.btn-close svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.btn-close:hover svg path,
+.btn-close:focus svg path {
+  stroke: var(--accent-color);
+}
+
+.menu-btn svg {
+  display: block;
+  width: 24px;
+  fill: var(--main-color);
+}
+
+.logo-img {
+  display: block;
+  width: 104px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mobile menu styles*/
+
+.mobile-bcg {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: absolute;
+  top: 0;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 0 0;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 62px;
+  gap: 24px;
+}
+
+.mobile-links a {
+  color: var(--main-color);
+  text-align: center;
+  font-family: "Anzeigen Grotesk T";
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.mobile-links a:hover,
+.mobile-links a:focus {
+  color: var(--accent-color);
+}
+
+/*responsive styles*/
+
+@media screen and (min-width: 768px) {
+  .mobile-links {
+    margin-top: 78px;
+    gap: 36px;
+  }
+  .mobile-links a {
+    font-size: 40px;
+  }
+  .header {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mobile-links {
+    margin-top: 100px;
+    gap: 48px;
+  }
+  .mobile-links a {
+    font-size: 64px;
+  }
+}

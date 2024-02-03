@@ -1,0 +1,115 @@
+.contacts-section {
+  width: 100%;
+  margin-top: 124px;
+}
+
+.contacts-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contacts-title {
+  color: var(--accent-color);
+  text-align: center;
+  font-family: "Anzeigen Grotesk T";
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+
+.contacts-content {
+  width: 100%;
+}
+
+.contacts-content p {
+  color: #222;
+  text-align: center;
+  font-family: "Anzeigen Grotesk T";
+  font-size: 28px;
+  letter-spacing: -0.28px;
+  text-transform: uppercase;
+  margin: 24px 0;
+  padding: 0 30px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  gap: 8px;
+  color: var(--extra-text-color);
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+
+.contacts-content {
+  width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-link {
+    font-size: 24px;
+    letter-spacing: -0.24px;
+  }
+  .contacts-section {
+    margin-top: 184px;
+  }
+  .contacts-title {
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+  }
+  .contacts-content p {
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.24px;
+    margin: 24px 0;
+    padding: 0 80px;
+  }
+  .contacts-content {
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts-section {
+    margin-top: 100px;
+  }
+
+  .contacts-title {
+    font-size: 100px;
+    letter-spacing: -1px;
+  }
+  .contacts-content p {
+    text-align: start;
+    font-size: 40px;
+    line-height: 95%;
+    letter-spacing: -0.4px;
+    padding: 0 40px 0 0;
+    margin: 56px 0 32px;
+  }
+  .contacts {
+    align-items: start;
+  }
+  .contacts-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contacts-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
