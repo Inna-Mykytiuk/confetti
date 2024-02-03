@@ -12,23 +12,6 @@ const Header = () => {
   const [isOpen, setisOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
-  // const handleScroll = () => {
-  //   if (window.scrollY > 0) {
-  //     setScrolling(true);
-  //   } else {
-  //     setScrolling(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  useEffect(() => {
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setScrolling(true);
@@ -37,20 +20,21 @@ const Header = () => {
     }
   };
 
-  window.addEventListener("scroll", handleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-  }, [isOpen]);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.classList.add("no-scroll");
+  //   } else {
+  //     document.body.classList.remove("no-scroll");
+  //   }
+  // }, [isOpen]);
 
   const openMobileMenu = () => {
     setisOpen(true);
