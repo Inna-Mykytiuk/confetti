@@ -12,12 +12,13 @@ const SubmitForm = () => {
   const [message, setMessage] = useState("");
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleNameChange = (event) => {
     const newName = event.target.value;
     setName(newName);
 
-    if (/\d/.test(newName)) {
+    if (!newName || /\d/.test(newName) || !/^[a-zA-Z]+$/.test(newName)) {
       setNameError("Nieprawidłowe Іmię");
     } else {
       setNameError("");
@@ -29,7 +30,7 @@ const SubmitForm = () => {
     setEmail(newEmail);
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(newEmail)) {
+    if (!newEmail || !emailRegex.test(newEmail)) {
       setEmailError("Nieprawidłowy email");
     } else {
       setEmailError("");
@@ -43,6 +44,14 @@ const SubmitForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!name || !email || nameError || emailError) {
+      setNameError("Wpisz imię");
+      setEmailError("Wprowadź adres e-mail");
+      setFormSubmitted(true);
+      return;
+    }
+
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
@@ -76,9 +85,13 @@ const SubmitForm = () => {
               value={name}
               onChange={handleNameChange}
               placeholder='Imię'
-              className={nameError ? "errorBcg" : ""}
+              className={
+                nameError || (formSubmitted && !name) ? "errorBcg" : ""
+              }
             />
-            {nameError && <span className='error'>{nameError}</span>}
+            {(nameError || (formSubmitted && !name)) && (
+              <span className='error'>{nameError}</span>
+            )}
           </div>
           <div className='form-group'>
             <p>E-mail*:</p>
@@ -88,9 +101,13 @@ const SubmitForm = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder='mail@gmail.com'
-              className={emailError ? "errorBcg" : ""}
+              className={
+                emailError || (formSubmitted && !email) ? "errorBcg" : ""
+              }
             />
-            {emailError && <span className='error'>{emailError}</span>}
+            {(emailError || (formSubmitted && !email)) && (
+              <span className='error'>{emailError}</span>
+            )}
           </div>
 
           <div className='form-textarea'>
