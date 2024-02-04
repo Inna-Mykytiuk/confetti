@@ -67,7 +67,7 @@ const About = () => {
               </p>
             </motion.li>
             <motion.li className='about-item'
-              initial="hidden"
+            initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.3 }}
@@ -75,7 +75,7 @@ const About = () => {
                 hidden: { opacity: 0, x: 100 },
                 visible: { opacity: 1, x: 0 },
               }}
-            >
+              >
               <h3>Gwarancja dostawy i montażu</h3>
               <p>
                 Firma gwarantuje nie tylko wysokiej jakości dostawę zamówień,
