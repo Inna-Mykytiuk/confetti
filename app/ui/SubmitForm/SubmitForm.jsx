@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Image from "next/image";
 import "./SubmitForm.css";
 import Baloon1 from "../../../public/assets/images/balloon1.png";
@@ -15,6 +15,15 @@ const SubmitForm = () => {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+ useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem("formData"));
+    if (savedData) {
+      setName(savedData.name || "");
+      setEmail(savedData.email || "");
+      setMessage(savedData.message || "");
+    }
+  }, []);
 
   const handleNameChange = (event) => {
     const newName = event.target.value;
@@ -53,17 +62,16 @@ const SubmitForm = () => {
       setFormSubmitted(true);
       return;
     }
+    const formData = { name, email, message };
+    localStorage.setItem("formData", JSON.stringify(formData));
+
     setName("");
     setEmail("");
     setMessage("");
     setFormSubmitted(true);
     toast.success("Dane przesłane pomyślnie !", {
-        position: "bottom-right",
-      });
-
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+      position: "bottom-right",
+    });
   };
 
   return (
