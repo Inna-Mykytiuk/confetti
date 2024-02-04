@@ -1,6 +1,7 @@
 .contacts-section {
   width: 100%;
   margin-top: 124px;
+  margin-bottom: 80px;
 }
 
 .contacts-wrapper {
@@ -81,6 +82,7 @@
   }
   .contacts-section {
     margin-top: 184px;
+    margin-bottom: 80px;
   }
   .contacts-title {
     font-size: 48px;
@@ -102,7 +104,8 @@
 
 @media screen and (min-width: 1280px) {
   .contacts-section {
-    margin-top: 100px;
+    margin-top: 200px;
+    margin-bottom: 100px;
   }
 
   .contacts-title {

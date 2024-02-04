@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  margin: 32px 0 80px 0;
+  margin: 32px 0 0px 0;
 }
 
 .form {
@@ -153,7 +153,7 @@ input.errorBcg {
     width: 460px;
     height: 469px;
     transform: rotate(-45deg);
-    top: -45px;
+    top: -130px;
     left: -200px;
   }
 
@@ -162,7 +162,15 @@ input.errorBcg {
     height: 390px;
     transform: rotate(9deg);
 
-    bottom: 145px;
+    bottom: 40px;
     right: -125px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+.wrapper {
+  margin: 0;
+}
+}
+
+
