@@ -65,7 +65,10 @@ To run the application locally, follow these steps:
    For dynamic and eye-catching presentations of our balloon decorations, we've implemented React-Slick, a powerful slider component that showcases our portfolio in style.
 
 5. Framer Motion:
-   Our project incorporates Framer Motion to bring life to the user interface with stunning animations. Framer Motion is a React library that simplifies the creation of smooth and interactive animations, adding a layer of dynamism to various elements on our website. 
+   Our project incorporates Framer Motion to bring life to the user interface with stunning animations. Framer Motion is a React library that simplifies the creation of smooth and interactive animations, adding a layer of dynamism to various elements on our website.
 
+6. React-Toastify: 
+    To provide informative and visually appealing notifications  to our users, we've integrated React-Toastify into our project. This library allows us to easily display toast messages, enhancing the overall user experience by delivering important updates and alerts in a non-intrusive manner. 
+    
 ![preview](https://github.com/Inna-Mykytiuk/confetti/blob/main/public/assets/images/confetti.jpg)
 
