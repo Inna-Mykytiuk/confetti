@@ -5,6 +5,8 @@ import Image from "next/image";
 import "./SubmitForm.css";
 import Baloon1 from "../../../public/assets/images/balloon1.png";
 import Baloon2 from "../../../public/assets/images/balloon2.png";
+import { toast, ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const SubmitForm = () => {
   const [name, setName] = useState("");
@@ -55,6 +57,9 @@ const SubmitForm = () => {
     setEmail("");
     setMessage("");
     setFormSubmitted(true);
+    toast.success("Dane przesłane pomyślnie !", {
+        position: "bottom-right",
+      });
 
     console.log("Name:", name);
     console.log("Email:", email);
@@ -63,6 +68,8 @@ const SubmitForm = () => {
 
   return (
     <div className='wrapper'>
+      
+
       <Image
         src={Baloon1}
         alt='air baloon'
@@ -133,9 +140,11 @@ const SubmitForm = () => {
           >
             Wyślij
           </button>
+          <ToastContainer />
         </div>
       </form>
     </div>
+    
   );
 };
 
