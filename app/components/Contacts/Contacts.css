@@ -121,7 +121,7 @@
     margin: 56px 0 32px;
   }
   .contacts {
-    align-items: start;
+    align-items: flex-start;
   }
   .contacts-wrapper {
     flex-direction: row;
@@ -130,6 +130,6 @@
   .contacts-content {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 }
