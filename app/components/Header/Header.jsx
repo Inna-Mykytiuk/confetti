@@ -6,10 +6,9 @@ import "./Header.css";
 import MenuBurger from "../../../public/assets/icons/menu.svg";
 import CloseBtn from "../../../public/assets/icons/close-square.svg";
 import Logo from "../../../public/assets/icons/logo.svg";
-import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
   const handleScroll = () => {
@@ -29,13 +28,26 @@ const Header = () => {
   }, []);
 
 
+    const handleEscape = (e) => {
+    if (e.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscape);
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+
   const openMobileMenu = () => {
-    setisOpen(true);
+    setIsOpen(true);
     document.body.classList.add("no-scroll");
   };
 
   const closeMobileMenu = () => {
-    setisOpen(false);
+    setIsOpen(false);
     document.body.classList.remove("no-scroll");
   };
 
