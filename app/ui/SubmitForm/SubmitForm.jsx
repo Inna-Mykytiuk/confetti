@@ -104,7 +104,7 @@ const SubmitForm = () => {
               value={name}
               onChange={handleNameChange}
               placeholder='Imię'
-              autoComplete='name'
+              autocomplete='off'
               className={
                 nameError || (formSubmitted && !name) ? "errorBcg" : ""
               }
@@ -121,7 +121,7 @@ const SubmitForm = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder='mail@gmail.com'
-              autoComplete='email'
+              autocomplete='off'
               className={
                 emailError || (formSubmitted && !email) ? "errorBcg" : ""
               }
