@@ -99,6 +99,10 @@ main {
   margin: 0 auto;
 }
 
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;

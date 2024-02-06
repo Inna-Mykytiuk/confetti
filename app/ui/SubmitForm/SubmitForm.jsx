@@ -1,12 +1,12 @@
 "use client";
 
-import { useState,useEffect } from "react";
 import Image from "next/image";
+import { useState,useEffect } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./SubmitForm.css";
 import Baloon1 from "../../../public/assets/images/balloon1.png";
 import Baloon2 from "../../../public/assets/images/balloon2.png";
-import { toast, ToastContainer } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
 
 const SubmitForm = () => {
   const [name, setName] = useState("");
