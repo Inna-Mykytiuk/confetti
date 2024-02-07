@@ -11,49 +11,43 @@ import { reviews } from "@/app/data/reviewData";
 
 import { Component } from "react";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "white",
-        height: "56px",
-        width: "56px",
-        cursor: "pointer",
-      }}
-      onClick={onClick}
-    >
-      <ArrowRight className='arrow' />
-    </div>
-  );
-}
+const SampleNextArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{
+      ...style,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "white",
+      height: "56px",
+      width: "56px",
+      cursor: "pointer",
+    }}
+    onClick={onClick}
+  >
+    <ArrowRight className='arrow' />
+  </div>
+);
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "white",
-        height: "56px",
-        width: "56px",
-        cursor: "pointer",
-      }}
-      onClick={onClick}
-    >
-      <ArrowLeft className='arrow' />
-    </div>
-  );
-}
+const SamplePrevArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{
+      ...style,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "white",
+      height: "56px",
+      width: "56px",
+      cursor: "pointer",
+    }}
+    onClick={onClick}
+  >
+    <ArrowLeft className='arrow' />
+  </div>
+);
 
 export default class ReviewSlider extends Component {
   render() {
