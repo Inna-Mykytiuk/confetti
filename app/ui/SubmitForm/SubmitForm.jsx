@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./SubmitForm.css";
@@ -16,14 +16,15 @@ const SubmitForm = () => {
   const [emailError, setEmailError] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
- useEffect(() => {
-    const savedData = JSON.parse(localStorage.getItem("formData"));
-    if (savedData) {
-      setName(savedData.name || "");
-      setEmail(savedData.email || "");
-      setMessage(savedData.message || "");
-    }
-  }, []);
+  
+  useEffect(() => {
+  const savedData = JSON.parse(localStorage.getItem("formData"));
+  if (savedData) {
+    setName(savedData.name || "");
+    setEmail(savedData.email || "");
+    setMessage(savedData.message || "");
+  }
+}, [name, email, message]);
 
   const handleNameChange = (event) => {
     const newName = event.target.value;
@@ -104,7 +105,7 @@ const SubmitForm = () => {
               value={name}
               onChange={handleNameChange}
               placeholder='Imię'
-              autocomplete='off'
+              autoComplete='off'
               className={
                 nameError || (formSubmitted && !name) ? "errorBcg" : ""
               }
@@ -121,7 +122,7 @@ const SubmitForm = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder='mail@gmail.com'
-              autocomplete='off'
+              autoComplete='off'
               className={
                 emailError || (formSubmitted && !email) ? "errorBcg" : ""
               }
