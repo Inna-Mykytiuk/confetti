@@ -24,7 +24,7 @@ const SubmitForm = () => {
     setEmail(savedData.email || "");
     setMessage(savedData.message || "");
   }
-}, [name, email, message]);
+}, []);
 
   const handleNameChange = (event) => {
     const newName = event.target.value;
@@ -74,6 +74,7 @@ const SubmitForm = () => {
       position: "bottom-right",
     });
   };
+
 
   return (
     <div className='wrapper'>
