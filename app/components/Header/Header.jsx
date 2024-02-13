@@ -33,22 +33,18 @@ const Header = () => {
       setIsOpen(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("keydown", handleEscape);
     return () => {
       window.removeEventListener("keydown", handleEscape);
     };
   }, []);
-
-
-  const openMobileMenu = () => {
-    setIsOpen(true);
-    document.body.classList.add("no-scroll");
-  };
-
-  const closeMobileMenu = () => {
-    setIsOpen(false);
-    document.body.classList.remove("no-scroll");
+  
+  const handleToggleMenu = () => {
+    setIsOpen(prev => !prev);
+    const htmlElement = document.documentElement;
+    isOpen ? (htmlElement.style.overflow = 'auto') : (htmlElement.style.overflow = 'hidden');
   };
 
   return (
@@ -58,7 +54,7 @@ const Header = () => {
           <a href='/' className={`logo ${scrolling ? "scrolling" : ""}`}>
             <Logo aria-label='logo' />
           </a>
-          <button type='button' className='menu-btn' onClick={openMobileMenu}>
+          <button type='button' className='menu-btn' onClick={handleToggleMenu}>
             <p className={`menu-text ${scrolling ? "scrolling" : ""}`}>Menu</p>
             <MenuBurger aria-label='menu' />
           </button>
@@ -75,7 +71,7 @@ const Header = () => {
               <button
                 type='button'
                 className='btn-close'
-                onClick={closeMobileMenu}
+                onClick={handleToggleMenu}
                 aria-label='close-btn'
               >
                 <CloseBtn aria-label='close-btn' />
@@ -86,7 +82,7 @@ const Header = () => {
                 to='main'
                 smooth={true}
                 offset={-70}
-                onClick={closeMobileMenu}
+                onClick={handleToggleMenu}
               >
                 główna
               </Link>
@@ -94,7 +90,7 @@ const Header = () => {
                 to='about'
                 smooth={true}
                 offset={-100}
-                onClick={closeMobileMenu}
+                onClick={handleToggleMenu}
               >
                 O nas
               </Link>
@@ -102,7 +98,7 @@ const Header = () => {
                 to='reviews'
                 smooth={true}
                 offset={-100}
-                onClick={closeMobileMenu}
+                onClick={handleToggleMenu}
               >
                 Recenzje
               </Link>
@@ -110,7 +106,7 @@ const Header = () => {
                 to='contacts'
                 smooth={true}
                 offset={-80}
-                onClick={closeMobileMenu}
+                onClick={handleToggleMenu}
               >
                 Kontakty
               </Link>
